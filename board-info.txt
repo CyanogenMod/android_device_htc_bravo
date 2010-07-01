@@ -1,0 +1,2 @@
+require mid=P*
+require board=bravo|nexusone
