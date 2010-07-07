@@ -19,6 +19,13 @@
 # not specialized for any geography.
 #
 
+# Kernel Targets
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+ifeq ($(TARGET_KERNEL_CONFIG),)
+TARGET_PREBUILT_KERNEL := device/htc/bravo/kernel
+endif # TARGET_KERNEL_CONFIG
+endif # TARGET_PREBUILT_KERNEL
+
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 
 PRODUCT_COPY_FILES := \
