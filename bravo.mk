@@ -22,7 +22,7 @@
 # Kernel Targets
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 ifeq ($(TARGET_KERNEL_CONFIG),)
-TARGET_PREBUILT_KERNEL := device/htc/bravo/kernel
+TARGET_PREBUILT_KERNEL := device/htc/bravo-common/kernel
 endif # TARGET_KERNEL_CONFIG
 endif # TARGET_PREBUILT_KERNEL
 
