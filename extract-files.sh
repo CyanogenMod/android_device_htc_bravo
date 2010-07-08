@@ -42,6 +42,7 @@ adb pull /system/lib/libOmxVdec.so ../../../vendor/htc/$DEVICE/proprietary/libOm
 adb pull /system/lib/libOmxVidEnc.so ../../../vendor/htc/$DEVICE/proprietary/libOmxVidEnc.so
 adb pull /system/lib/libopencorehw.so ../../../vendor/htc/$DEVICE/proprietary/libopencorehw.so
 adb pull /system/lib/libqcomm_omx.so ../../../vendor/htc/$DEVICE/proprietary/libqcomm_omx.so
+adb pull /system/lib/hw/sensors.bravo.so ../../../vendor/htc/$DEVICE/proprietary/sensors.bravo.so
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/htc/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
@@ -91,6 +92,7 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/libOmxVidEnc.so:/system/lib/libOmxVidEnc.so \\
     vendor/htc/__DEVICE__/proprietary/libopencorehw.so:/system/lib/libopencorehw.so \\
     vendor/htc/__DEVICE__/proprietary/libqcomm_omx.so:/system/lib/libqcomm_omx.so \\
+    vendor/htc/__DEVICE__/proprietary/sensors.bravo.so:/system/lib/hw/sensors.bravo.so \\
 
 EOF
 
