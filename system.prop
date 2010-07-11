@@ -1,0 +1,46 @@
+#
+# system.prop for bravo
+#
+
+ro.sf.lcd_density=240
+
+rild.libpath=/system/lib/libhtc_ril.so
+
+# Default network type.
+# 0 => WCDMA preferred.
+ro.telephony.default_network=0
+
+wifi.interface=eth0
+wifi.supplicant_scan_interval=15
+
+# The OpenGL ES API level that is natively supported by this device.
+# This is a 16.16 fixed point number
+ro.opengles.version = 131072
+
+# This is a high density device with more memory, so larger vm heaps for it.
+dalvik.vm.heapsize=32m
+
+# RIL settings
+ro.ril.enable.dtm = 1
+ro.ril.gprsclass = 12
+ro.ril.hsdpa.category = 8
+ro.ril.hsupa.category = 5
+ro.ril.hsxpa = 2
+
+# RIL Region settings
+ro.ril.oem.ecclist=911,112,999,000,08,118,111,120,122,110,119,995,0800
+ro.ril.disable.fd.plmn.prefix=23402,23410,23411
+ro.ril.enable.sdr=0
+ro.ril.enable.a52.HTC-ITA=1
+ro.ril.enable.a53.HTC-ITA=1
+ro.ril.enable.a52.VODA-Portugal=0
+ro.ril.enable.a53.VODA-Portugal=1
+
+# Set default_france.acdb to audio_ctl driver if the ro.cid is HTC__203
+ro.ril.enable.prl.recognition = 1
+
+# Fix Mic
+media.a1026.nsForVoiceRec=0
+
+# Dalvik only in data
+dalvik.vm.dexopt-data-only=1

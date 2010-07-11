@@ -1,0 +1,18 @@
+This directory contains the firmware_install.565 and
+firmware_error.565 bitmaps shown when installing a radio or hboot
+update via OTA on a passion device.
+
+They were generated from the corresponding .png files by doing:
+
+  convert -gravity center -extent 480x800 -background black -depth 8 icon_firmware_install.png temp.rgb
+  rgb2565 -w 480 < temp.rgb > firmware_install.565
+
+  convert -gravity center -extent 480x800 -background black -depth 8 icon_firmware_error.png temp.rgb
+  rgb2565 -w 480 < temp.rgb > firmware_error.565
+
+(convert is part of ImageMagick; rgb2565 is built in the android
+source tree.)
+
+bitmap_size.txt contains the width, height, and depth of the bitmaps
+(480 x 800 x 16bpp).
+
