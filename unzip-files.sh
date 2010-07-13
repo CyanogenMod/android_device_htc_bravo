@@ -17,7 +17,7 @@
 DEVICE=bravo
 
 mkdir -p ../../../vendor/htc/$DEVICE/proprietary
-unzip -j -o ../../../${DEVICE}_update.zip system/bin/akmd system/bin/mm-venc-omx-test system/bin/parse_radio_log system/etc/01_qcomm_omx.cfg system/etc/AudioBTID.csv system/etc/firmware/bcm4329.hcd system/etc/firmware/default.acdb system/etc/firmware/default_att.acdb system/etc/firmware/default_france.acdb system/etc/firmware/fw_bcm4329_apsta.bin system/etc/firmware/fw_bcm4329.bin system/etc/firmware/yamato_pfp.fw system/etc/firmware/yamato_pm4.fw system/lib/egl/libEGL_adreno200.so system/lib/egl/libGLESv1_CM_adreno200.so system/lib/egl/libGLESv2_adreno200.so system/lib/egl/libq3dtools_adreno200.so system/lib/libcamera.so system/lib/libgps.so system/lib/libgsl.so system/lib/libhtc_acoustic.so system/lib/libhtc_ril.so system/lib/liblvmxipc.so system/lib/libmm-omxcore.so system/lib/liboemcamera.so system/lib/libOmxCore.so system/lib/libOmxVdec.so system/lib/libOmxVidEnc.so -d ../../../vendor/htc/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/akmd system/bin/mm-venc-omx-test system/bin/parse_radio_log system/etc/01_qcomm_omx.cfg system/etc/AudioBTID.csv system/etc/firmware/bcm4329.hcd system/etc/firmware/default.acdb system/etc/firmware/default_att.acdb system/etc/firmware/default_france.acdb system/etc/firmware/fw_bcm4329_apsta.bin system/etc/firmware/fw_bcm4329.bin system/etc/firmware/yamato_pfp.fw system/etc/firmware/yamato_pm4.fw system/etc/vpimg system/lib/egl/libEGL_adreno200.so system/lib/egl/libGLESv1_CM_adreno200.so system/lib/egl/libGLESv2_adreno200.so system/lib/egl/libq3dtools_adreno200.so system/lib/libcamera.so system/lib/libgps.so system/lib/libgsl.so system/lib/libhtc_acoustic.so system/lib/libhtc_ril.so system/lib/liblvmxipc.so system/lib/libmm-omxcore.so system/lib/liboemcamera.so system/lib/libOmxCore.so system/lib/libOmxVdec.so system/lib/libOmxVidEnc.so system/lib/libopencorehw.so system/lib/libqcomm_omx.so system/lib/libstagefrighthw.so -d ../../../vendor/htc/$DEVICE/proprietary
 chmod 755 ../../../vendor/htc/$DEVICE/proprietary/akmd
 chmod 755 ../../../vendor/htc/$DEVICE/proprietary/mm-venc-omx-test
 chmod 755 ../../../vendor/htc/$DEVICE/proprietary/parse_radio_log
@@ -59,6 +59,7 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/fw_bcm4329.bin:/system/etc/firmware/fw_bcm4329.bin \\
     vendor/htc/__DEVICE__/proprietary/yamato_pfp.fw:/system/etc/firmware/yamato_pfp.fw \\
     vendor/htc/__DEVICE__/proprietary/yamato_pm4.fw:/system/etc/firmware/yamato_pm4.fw \\
+    vendor/htc/__DEVICE__/proprietary/vpimg:/system/etc/vpimg \\
     vendor/htc/__DEVICE__/proprietary/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \\
     vendor/htc/__DEVICE__/proprietary/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \\
     vendor/htc/__DEVICE__/proprietary/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \\
@@ -74,6 +75,10 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/libOmxCore.so:/system/lib/libOmxCore.so \\
     vendor/htc/__DEVICE__/proprietary/libOmxVdec.so:/system/lib/libOmxVdec.so \\
     vendor/htc/__DEVICE__/proprietary/libOmxVidEnc.so:/system/lib/libOmxVidEnc.so \\
+    vendor/htc/__DEVICE__/proprietary/libopencorehw.so:/system/lib/libopencorehw.so \\
+    vendor/htc/__DEVICE__/proprietary/libqcomm_omx.so:/system/lib/libqcomm_omx.so \\
+    vendor/htc/__DEVICE__/proprietary/libstagefrighthw.so:/system/lib/libstagefrighthw.so
+
 EOF
 
 ./setup-makefiles.sh
