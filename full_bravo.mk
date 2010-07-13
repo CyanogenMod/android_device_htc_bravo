@@ -25,6 +25,6 @@ $(call inherit-product, device/htc/bravo/bravo_us.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := htc_bravo
+PRODUCT_NAME := full_bravo
 PRODUCT_DEVICE := bravo
-PRODUCT_MODEL := HTC Desire
+PRODUCT_MODEL := Full Android on Bravo
