@@ -35,7 +35,7 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.sf.lcd_density=240 \
     rild.libpath=/system/lib/libhtc_ril.so \
     wifi.interface=eth0 \
-    wifi.supplicant_scan_interval=15
+    wifi.supplicant_scan_interval=15 \
 
 # Default network type.
 # 0 => WCDMA preferred.
@@ -56,3 +56,7 @@ $(call inherit-product-if-exists, vendor/htc/bravo/bravo-vendor.mk)
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 $(call inherit-product, device/htc/bravo-common/bravo.mk)
+
+# Bravo have huge 250Mb unwritable system and small 50Mb cache .
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dexpot-data-only=1
