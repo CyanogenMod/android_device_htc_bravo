@@ -27,7 +27,6 @@ adb pull /system/etc/01_qcomm_omx.cfg ../../../vendor/htc/$DEVICE/proprietary/01
 adb pull /system/etc/AudioBTID.csv ../../../vendor/htc/$DEVICE/proprietary/AudioBTID.csv
 adb pull /system/etc/firmware/bcm4329.hcd ../../../vendor/htc/$DEVICE/proprietary/bcm4329.hcd
 adb pull /system/etc/firmware/default.acdb ../../../vendor/htc/$DEVICE/proprietary/default.acdb
-adb pull /system/etc/firmware/default_att.acdb ../../../vendor/htc/$DEVICE/proprietary/default_att.acdb
 adb pull /system/etc/firmware/default_france.acdb ../../../vendor/htc/$DEVICE/proprietary/default_france.acdb
 adb pull /system/etc/firmware/default_nel.acdb ../../../vendor/htc/$DEVICE/proprietary/default_nel.acdb
 adb pull /system/etc/firmware/fw_bcm4329_apsta.bin ../../../vendor/htc/$DEVICE/proprietary/fw_bcm4329_apsta.bin
@@ -85,7 +84,6 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/AudioBTID.csv:/system/etc/AudioBTID.csv \\
     vendor/htc/__DEVICE__/proprietary/bcm4329.hcd:/system/etc/firmware/bcm4329.hcd \\
     vendor/htc/__DEVICE__/proprietary/default.acdb:/system/etc/firmware/default.acdb \\
-    vendor/htc/__DEVICE__/proprietary/default_att.acdb:/system/etc/firmware/default_att.acdb \\
     vendor/htc/__DEVICE__/proprietary/default_france.acdb:/system/etc/firmware/default_france.acdb \\
     vendor/htc/__DEVICE__/proprietary/default_nel.acdb:/system/etc/firmware/default_nel.acdb \\
     vendor/htc/__DEVICE__/proprietary/fw_bcm4329_apsta.bin:/system/etc/firmware/fw_bcm4329_apsta.bin \\
