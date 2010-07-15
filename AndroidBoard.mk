@@ -21,8 +21,15 @@
 # Least specific includes go first, so that they can get
 # overridden further down
 
-# include rules from the generic bravo board
-include device/htc/bravo-common/AndroidBoardCommon.mk
+LOCAL_PATH := $(call my-dir)
+
+$(call add-radio-file,recovery/images/firmware_install.565)
+$(call add-radio-file,recovery/images/firmware_error.565)
+$(call add-radio-file,recovery/images/bitmap_size.txt)
+
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := bravo-keypad.kcm
+include $(BUILD_KEY_CHAR_MAP)
 
 # include the non-open-source counterpart to this file
 -include vendor/htc/bravo/AndroidBoardVendor.mk
