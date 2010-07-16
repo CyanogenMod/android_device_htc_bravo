@@ -58,7 +58,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/bravo/bravo-vendor.mk)
 
-PRODUCT_PROPERTY_OVERRIDES :=
+PRODUCT_PROPERTY_OVERRIDES +=
     ro.media.dec.jpeg.memcap=20000000
 
 DEVICE_PACKAGE_OVERLAYS := device/htc/bravo/overlay
