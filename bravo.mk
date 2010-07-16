@@ -53,7 +53,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bravo have huge 250Mb unwritable system and small 50Mb cache .
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dexpot-data-only=1
+    dalvik.vm.dexopt-data-only=1
 
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/bravo/bravo-vendor.mk)
