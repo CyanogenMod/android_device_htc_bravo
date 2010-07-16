@@ -20,7 +20,7 @@
 #
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/htc/bravo/bravo_us.mk)
+$(call inherit-product, device/htc/bravo/bravo_eu.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic.mk)
 
 # Discard inherited values and use our own instead.
