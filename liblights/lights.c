@@ -35,6 +35,7 @@ static pthread_once_t g_init = PTHREAD_ONCE_INIT;
 static pthread_mutex_t g_lock = PTHREAD_MUTEX_INITIALIZER;
 static struct light_state_t g_notification;
 static struct light_state_t g_battery;
+static int g_backlight = 255;
 
 char const*const AMBER_LED_FILE = "/sys/class/leds/amber/brightness";
 char const*const GREEN_LED_FILE = "/sys/class/leds/green/brightness";
@@ -45,15 +46,14 @@ char const*const BUTTON_FILE = "/sys/class/leds/button-backlight/brightness";
 char const*const AMBER_BLINK_FILE = "/sys/class/leds/amber/blink";
 char const*const GREEN_BLINK_FILE = "/sys/class/leds/green/blink";
 
+char const*const LCD_BACKLIGHT_FILE = "/sys/class/leds/lcd-backlight/brightness";
+
 enum {
 	LED_AMBER,
 	LED_GREEN,
 	LED_BLUE,
 	LED_BLANK,
 };
-
-
-
 
 /**
  * Aux method, write int to file
@@ -175,6 +175,26 @@ static int set_light_buttons (struct light_device_t* dev,
 	return 0;
 }
 
+static int rgb_to_brightness(struct light_state_t const* state)
+{
+    int color = state->color & 0x00ffffff;
+    return ((77*((color>>16)&0x00ff))
+            + (150*((color>>8)&0x00ff)) + (29*(color&0x00ff))) >> 8;
+}
+
+static int set_light_backlight(struct light_device_t* dev,
+		struct light_state_t const* state) {
+	int err = 0;
+	int brightness = rgb_to_brightness(state);
+	LOGV("%s brightness=%d color=0x%08x",
+		__func__,brightness, state->color);
+	pthread_mutex_lock(&g_lock);
+	g_backlight = brightness;
+	err = write_int(LCD_BACKLIGHT_FILE, brightness);
+	pthread_mutex_unlock(&g_lock);
+	return err;
+}
+
 static int set_light_battery (struct light_device_t* dev,
 		struct light_state_t const* state) {
 	pthread_mutex_lock (&g_lock);
@@ -214,7 +234,10 @@ static int open_lights (const struct hw_module_t* module, char const* name,
 	int (*set_light)(struct light_device_t* dev,
 			struct light_state_t const* state);
 
-	if (0 == strcmp(LIGHT_ID_BUTTONS, name)) {
+	if (0 == strcmp(LIGHT_ID_BACKLIGHT, name)) {
+        	set_light = set_light_backlight;
+	}
+	else if (0 == strcmp(LIGHT_ID_BUTTONS, name)) {
 		set_light = set_light_buttons;
 	}
 	else if (0 == strcmp(LIGHT_ID_BATTERY, name)) {
