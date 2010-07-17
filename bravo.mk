@@ -28,10 +28,10 @@ endif # TARGET_PREBUILT_KERNEL
 
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 
-PRODUCT_COPY_FILES := \
+PRODUCT_COPY_FILES += \
     device/htc/bravo/init.bravo.rc:root/init.bravo.rc
 
-PRODUCT_PROPERTY_OVERRIDES := \
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
     rild.libpath=/system/lib/libhtc_ril.so \
     wifi.interface=eth0 \
@@ -61,7 +61,7 @@ $(call inherit-product-if-exists, vendor/htc/bravo/bravo-vendor.mk)
 PRODUCT_PROPERTY_OVERRIDES +=
     ro.media.dec.jpeg.memcap=20000000
 
-DEVICE_PACKAGE_OVERLAYS := device/htc/bravo/overlay
+DEVICE_PACKAGE_OVERLAYS += device/htc/bravo/overlay
 
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -77,7 +77,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/bravo/media_profiles.xml:system/etc/media_profiles.xml
 
-PRODUCT_PACKAGES := \
+PRODUCT_PACKAGES += \
     sensors.bravo \
     lights.bravo \
     librs_jni
