@@ -35,7 +35,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
     rild.libpath=/system/lib/libhtc_ril.so \
     wifi.interface=eth0 \
-    wifi.supplicant_scan_interval=15 \
+    wifi.supplicant_scan_interval=15
 
 # Default network type.
 # 0 => WCDMA preferred.
