@@ -14,6 +14,8 @@ on boot
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
     chmod 0660                /sys/class/rfkill/rfkill0/state
 
+    chown radio radio /sys/module/pm/parameters/idle_sleep_mode
+
     # bluetooth MAC address programming
     chown bluetooth bluetooth /sys/module/board_bravo/parameters/bdaddr
     setprop ro.bt.bdaddr_path /sys/module/board_bravo/parameters/bdaddr
@@ -28,9 +30,6 @@ on boot
     chown system system /sys/class/leds/amber/blink
     chown system system /sys/class/leds/blue/brightness
     chown system system /sys/class/leds/blue/blink
-    chown system system /sys/class/leds/jogball-backlight/brightness
-    chown system system /sys/class/leds/jogball-backlight/color
-    chown system system /sys/class/leds/jogball-backlight/period
     chown system system /sys/class/leds/button-backlight/brightness
     chown system system /sys/class/leds/lcd-backlight/brightness
 
@@ -55,9 +54,6 @@ on boot
     setprop ro.ril.fast.dormancy.rule 1
     setprop ro.ril.fd.scron.timeout 4
     setprop ro.ril.fd.scroff.timeout 3
-
-    # GPRS class
-    setprop ro.ril.gprsclass 10
 
 # compass/accelerometer daemon
 service akmd /system/bin/akmd
