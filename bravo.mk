@@ -35,9 +35,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
     rild.libpath=/system/lib/libhtc_ril.so \
     wifi.interface=eth0 \
-    wifi.supplicant_scan_interval=15 \
-    ro.ril.hsxpa=2 \
-    ro.ril.gprsclass=12
+    wifi.supplicant_scan_interval=15
 
 # Default network type.
 # 0 => WCDMA preferred.
@@ -51,7 +49,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # This is a high density device with more memory, so larger vm heaps for it.
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapsize=24m
+    dalvik.vm.heapsize=32m
 
 # Bravo have huge 250Mb unwritable system and small 50Mb cache .
 PRODUCT_PROPERTY_OVERRIDES += \
