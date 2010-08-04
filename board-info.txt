@@ -1,4 +1,4 @@
 require mid=P*
 require board=bravo|desire
 require version-microp=031d
-require version-baseband=5.08.00.04
+require version-baseband=5.08.00.04|5.09.00.08|5.09.00.20
