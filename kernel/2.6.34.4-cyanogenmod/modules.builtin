@@ -35,6 +35,7 @@ kernel/crypto/authenc.ko
 kernel/crypto/rng.ko
 kernel/crypto/krng.ko
 kernel/block/cfq-iosched.ko
+kernel/block/bfq-iosched.ko
 kernel/drivers/base/firmware_class.ko
 kernel/drivers/block/loop.ko
 kernel/drivers/bluetooth/hci_uart.ko
@@ -62,8 +63,6 @@ kernel/drivers/input/misc/gpio_output.ko
 kernel/drivers/input/misc/gpio_axis.ko
 kernel/drivers/input/misc/keychord.ko
 kernel/drivers/input/misc/uinput.ko
-kernel/drivers/input/misc/crucialtec_oj.ko
-kernel/drivers/input/misc/crucialtec_softclick.ko
 kernel/drivers/input/touchscreen/synaptics_i2c_rmi.ko
 kernel/drivers/leds/led-class.ko
 kernel/drivers/leds/leds-gpio.ko
