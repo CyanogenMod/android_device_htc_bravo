@@ -113,9 +113,13 @@ static void set_speaker_light_locked (struct light_device_t *dev, struct light_s
 				case LED_GREEN:
 					write_int (GREEN_BLINK_FILE, 1);
 					break;
+				case LED_BLUE:
+					write_int (BLUE_LED_FILE, 1);
+					break;
 				case LED_BLANK:
 					write_int (AMBER_BLINK_FILE, 0);
 					write_int (GREEN_BLINK_FILE, 0);
+					write_int (BLUE_LED_FILE, 0);
 					break;
 				default:
 					LOGE("set_led_state colorRGB=%08X, unknown color\n",
