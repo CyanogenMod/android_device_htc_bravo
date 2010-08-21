@@ -158,5 +158,7 @@ PRODUCT_COPY_FILES += \
     device/htc/bravo/kernel/2.6.34.4-cyanogenmod/modules.pcimap:system/lib/modules/2.6.34.4-cyanogenmod/modules.pcimap \
     device/htc/bravo/kernel/2.6.34.4-cyanogenmod/modules.inputmap:system/lib/modules/2.6.34.4-cyanogenmod/modules.inputmap
 
+PRODUCT_COPY_FILES += $(TARGET_PREBUILT_KERNEL):kernel
+
 # stuff common to all HTC phones
 $(call inherit-product, device/htc/common/common.mk)
