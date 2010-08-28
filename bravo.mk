@@ -152,7 +152,7 @@ PRODUCT_COPY_FILES += \
     device/htc/bravo/kernel/2.6.34.5-cyanogenmod/modules.inputmap:system/lib/modules/2.6.34.5-cyanogenmod/modules.inputmap
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/htc/bravo/kernel
+LOCAL_KERNEL := device/htc/bravo/kernel/kernel
 else
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
