@@ -58,6 +58,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.enable.prl.recognition = 1
 
+# AGPS otpions
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ril.def.agps.mode = 2 \
+    ro.ril.def.agps.feature = 2
+
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
 PRODUCT_PROPERTY_OVERRIDES += \
