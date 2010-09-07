@@ -63,6 +63,7 @@ kernel/drivers/input/misc/gpio_output.ko
 kernel/drivers/input/misc/gpio_axis.ko
 kernel/drivers/input/misc/keychord.ko
 kernel/drivers/input/misc/uinput.ko
+kernel/drivers/input/misc/cm3602_lightsensor_microp.ko
 kernel/drivers/input/touchscreen/synaptics_i2c_rmi.ko
 kernel/drivers/leds/led-class.ko
 kernel/drivers/leds/leds-gpio.ko
