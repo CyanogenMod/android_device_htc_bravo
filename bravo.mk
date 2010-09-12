@@ -48,20 +48,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # For HSDPA low throughput
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ril.disable.power.collapse = 1
+    ro.ril.disable.power.collapse=1
 
 # For PDP overlap problem
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ril.avoid.pdp.overlap = 1
+    ro.ril.avoid.pdp.overlap=1
 
 # Set default_france.acdb to audio_ctl driver if the ro.cid is HTC__203
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ril.enable.prl.recognition = 1
+    ro.ril.enable.prl.recognition=1
 
 # AGPS otpions
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ril.def.agps.mode = 2 \
-    ro.ril.def.agps.feature = 2
+    ro.ril.def.agps.mode=2 \
+    ro.ril.def.agps.feature=2
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
@@ -79,7 +79,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/bravo/bravo-vendor.mk)
 
-PRODUCT_PROPERTY_OVERRIDES +=
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.media.dec.jpeg.memcap=20000000
 
 DEVICE_PACKAGE_OVERLAYS += device/htc/bravo/overlay
