@@ -137,6 +137,7 @@ PRODUCT_COPY_FILES += \
     device/htc/bravo/kernel/2.6.35.4-cyanogenmod/kernel/fs/nfs/nfs.ko:system/lib/modules/2.6.35.4-cyanogenmod/kernel/fs/nfs/nfs.ko \
     device/htc/bravo/kernel/2.6.35.4-cyanogenmod/kernel/fs/exportfs/exportfs.ko:system/lib/modules/2.6.35.4-cyanogenmod/kernel/fs/exportfs/exportfs.ko \
     device/htc/bravo/kernel/2.6.35.4-cyanogenmod/kernel/fs/nfsd/nfsd.ko:system/lib/modules/2.6.35.4-cyanogenmod/kernel/fs/nfsd/nfsd.ko \
+    device/htc/bravo/kernel/2.6.35.4-cyanogenmod/kernel/fs/nls/nls_utf8.ko:system/lib/modules/2.6.35.4-cyanogenmod/kernel/fs/nls/nls_utf8.ko \
     device/htc/bravo/kernel/2.6.35.4-cyanogenmod/kernel/fs/fuse/fuse.ko:system/lib/modules/2.6.35.4-cyanogenmod/kernel/fs/fuse/fuse.ko \
     device/htc/bravo/kernel/2.6.35.4-cyanogenmod/kernel/fs/cifs/cifs.ko:system/lib/modules/2.6.35.4-cyanogenmod/kernel/fs/cifs/cifs.ko \
     device/htc/bravo/kernel/2.6.35.4-cyanogenmod/kernel/fs/nfs_common/nfs_acl.ko:system/lib/modules/2.6.35.4-cyanogenmod/kernel/fs/nfs_common/nfs_acl.ko \
