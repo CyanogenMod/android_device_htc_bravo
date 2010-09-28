@@ -25,7 +25,7 @@
          where BACK rejects the current incoming call.  (Since it's so
          easy to press the key accidentally as you pull the phone out of
          your pocket.) -->
-    <bool name="allow_back_key_to_reject_incoming_call">false</bool>
+    <bool name="allow_back_key_to_reject_incoming_call">true</bool>
 
     <!-- Enable the onscreen "Dial" button in the emergency dialer. -->
     <bool name="config_show_onscreen_dial_button">true</bool>
