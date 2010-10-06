@@ -60,8 +60,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # AGPS otpions
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ril.def.agps.mode=2 \
-    ro.ril.def.agps.feature=2
+    ro.ril.def.agps.mode=2
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
