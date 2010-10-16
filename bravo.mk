@@ -46,14 +46,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=0
 
-# For HSDPA low throughput
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ril.disable.power.collapse=1
-
-# For PDP overlap problem
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ril.avoid.pdp.overlap=1
-
 # Set default_france.acdb to audio_ctl driver if the ro.cid is HTC__203
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.enable.prl.recognition=1
