@@ -54,7 +54,7 @@ kernel/drivers/i2c/busses/i2c-msm.ko
 kernel/drivers/input/input-core.ko
 kernel/drivers/input/evdev.ko
 kernel/drivers/input/keyreset.ko
-kernel/drivers/input/misc/capella_cm3602.ko
+kernel/drivers/input/misc/capella_cm3602_htc.ko
 kernel/drivers/input/misc/gpio_event.ko
 kernel/drivers/input/misc/gpio_matrix.ko
 kernel/drivers/input/misc/gpio_input.ko
