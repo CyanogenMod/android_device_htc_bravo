@@ -804,17 +804,13 @@ static uint32_t data__poll_process_ls_abs(struct sensors_data_context_t *dev,
              event->type, event->code, event->value,
              (int)event->time.tv_sec);
         if (event->code == EVENT_TYPE_LIGHT) {
-            struct input_absinfo absinfo;
-            int index;
-            if (!ioctl(fd, EVIOCGABS(ABS_DISTANCE), &absinfo)) {
-                index = event->value;
-                if (index >= 0) {
-                    new_sensors |= SENSORS_LIGHT;
-                    if (index >= ARRAY_SIZE(sLuxValues)) {
-                        index = ARRAY_SIZE(sLuxValues) - 1;
-                    }
-                    dev->sensors[ID_L].light = sLuxValues[index];
+            int index= event->value;
+            if (index >= 0) {
+                new_sensors |= SENSORS_LIGHT;
+                if (index >= ARRAY_SIZE(sLuxValues)) {
+                    index = ARRAY_SIZE(sLuxValues) - 1;
                 }
+                dev->sensors[ID_L].light = sLuxValues[index];
             }
         }
     }
