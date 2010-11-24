@@ -67,6 +67,8 @@ BOARD_EGL_CFG := device/htc/bravo/egl.cfg
 
 BOARD_USES_QCOM_LIBS := true
 
+BOARD_USE_NEW_LIBRIL_HTC := true
+
 # # cat /proc/mtd
 # dev:    size   erasesize  name
 # mtd0: 000a0000 00020000 "misc"
