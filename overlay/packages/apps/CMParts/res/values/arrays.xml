@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="entries_dual_led_colors">
+		<item>Green</item>
+		<item>Amber</item>
+		<item>Blue</item>
+		<item>None</item>
+	</string-array>
+
+	<string-array name="values_dual_led_colors" translatable="false">
+		<item>green</item>
+		<item>red</item>
+		<item>blue</item>
+		<item>none</item>
+	</string-array>
+</resources>
