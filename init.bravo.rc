@@ -1,6 +1,3 @@
-on early-init
-    device mtd@misc 0460 radio diag
-
 on boot
     mount debugfs /sys/kernel/debug /sys/kernel/debug
 
