@@ -83,6 +83,10 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 TARGET_RECOVERY_UI_LIB := librecovery_ui_bravo librecovery_ui_htc
 
-
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 TARGET_PREBUILT_KERNEL := device/htc/bravo/kernel/kernel
+
+# to enable the GPS HAL
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := bravoc
+# AMSS version to use for GPS
+BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 3200
