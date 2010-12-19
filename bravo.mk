@@ -100,6 +100,7 @@ PRODUCT_LOCALES := hdpi
 PRODUCT_COPY_FILES += \
     device/htc/bravo/bravo-keypad.kl:system/usr/keylayout/bravo-keypad.kl \
     device/htc/bravo/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
+    device/htc/bravo/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
     device/htc/bravo/vold.fstab:system/etc/vold.fstab
 
 # stuff common to all HTC phones
