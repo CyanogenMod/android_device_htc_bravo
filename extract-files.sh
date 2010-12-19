@@ -76,8 +76,8 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/default.acdb:/system/etc/firmware/default.acdb \\
     vendor/htc/__DEVICE__/proprietary/default_france.acdb:/system/etc/firmware/default_france.acdb \\
     vendor/htc/__DEVICE__/proprietary/default_nel.acdb:/system/etc/firmware/default_nel.acdb \\
-    vendor/htc/__DEVICE__/proprietary/fw_bcm4329_apsta.bin:/system/etc/firmware/fw_bcm4329_apsta.bin \\
-    vendor/htc/__DEVICE__/proprietary/fw_bcm4329.bin:/system/etc/firmware/fw_bcm4329.bin \\
+    vendor/htc/__DEVICE__/proprietary/fw_bcm4329_apsta.bin:/system/vendor/firmware/fw_bcm4329_apsta.bin \\
+    vendor/htc/__DEVICE__/proprietary/fw_bcm4329.bin:/system/vendor/firmware/fw_bcm4329.bin \\
     vendor/htc/__DEVICE__/proprietary/yamato_pfp.fw:/system/etc/firmware/yamato_pfp.fw \\
     vendor/htc/__DEVICE__/proprietary/yamato_pm4.fw:/system/etc/firmware/yamato_pm4.fw \\
     vendor/htc/__DEVICE__/proprietary/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \\
