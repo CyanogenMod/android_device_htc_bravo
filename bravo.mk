@@ -103,5 +103,17 @@ PRODUCT_COPY_FILES += \
     device/htc/bravo/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
     device/htc/bravo/vold.fstab:system/etc/vold.fstab
 
+PRODUCT_COPY_FILES += \
+    device/htc/bravo/bcm4329.ko:system/lib/modules/bcm4329.ko
+
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+LOCAL_KERNEL := device/htc/bravo/kernel
+else
+LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_KERNEL):kernel
+
 # stuff common to all HTC phones
 $(call inherit-product, device/htc/common/common.mk)
