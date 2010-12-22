@@ -72,6 +72,8 @@ BOARD_USE_FROYO_LIBCAMERA := true
 # Use RGB565 surfaces until userspace drivers are upgraded
 BOARD_NO_RGBX_8888 := true
 
+BOARD_USES_QCOM_LIBS := true
+
 # # cat /proc/mtd
 # dev:    size   erasesize  name
 # mtd0: 000a0000 00020000 "misc"
