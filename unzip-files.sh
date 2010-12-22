@@ -22,8 +22,6 @@ MANUFACTURER=htc
 mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/bin/akmd -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/akmd
-unzip -j -o ../../../${DEVICE}_update.zip system/bin/mm-venc-omx-test -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/mm-venc-omx-test
 unzip -j -o ../../../${DEVICE}_update.zip system/bin/parse_radio_log -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/parse_radio_log
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/AudioBTID.csv -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -41,11 +39,8 @@ unzip -j -o ../../../${DEVICE}_update.zip system/lib/libcamera.so -d ../../../ve
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libgsl.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libhtc_acoustic.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libhtc_ril.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmm-omxcore.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/liboemcamera.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxCore.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxVdec.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-unzip -j -o ../../../${DEVICE}_update.zip system/lib/libOmxVidEnc.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__MANUFACTURER__/$MANUFACTURER/g > ../../../vendor/$MANUFACTURER/$DEVICE/device-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
@@ -71,7 +66,6 @@ PRODUCT_COPY_FILES := \\
 # All the blobs necessary for bravo
 PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/akmd:system/bin/akmd \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/mm-venc-omx-test:system/bin/mm-venc-omx-test \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/parse_radio_log:system/bin/parse_radio_log \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/AudioBTID.csv:system/etc/AudioBTID.csv \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bcm4329.hcd:system/etc/firmware/bcm4329.hcd \\
@@ -88,11 +82,8 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libgsl.so:system/lib/libgsl.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libhtc_acoustic.so:system/lib/libhtc_acoustic.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmm-omxcore.so:system/lib/libmm-omxcore.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/liboemcamera.so:system/lib/liboemcamera.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxCore.so:system/lib/libOmxCore.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxVdec.so:system/lib/libOmxVdec.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxVidEnc.so:system/lib/libOmxVidEnc.so
 EOF
 
 ./setup-makefiles.sh

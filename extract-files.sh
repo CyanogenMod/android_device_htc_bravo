@@ -22,8 +22,6 @@ MANUFACTURER=htc
 mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 adb pull /system/bin/akmd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/akmd
 chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/akmd
-adb pull /system/bin/mm-venc-omx-test ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/mm-venc-omx-test
-chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/mm-venc-omx-test
 adb pull /system/bin/parse_radio_log ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/parse_radio_log
 chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/parse_radio_log
 adb pull /system/etc/AudioBTID.csv ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/AudioBTID.csv
@@ -41,11 +39,8 @@ adb pull /system/lib/libcamera.so ../../../vendor/$MANUFACTURER/$DEVICE/propriet
 adb pull /system/lib/libgsl.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/libgsl.so
 adb pull /system/lib/libhtc_acoustic.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/libhtc_acoustic.so
 adb pull /system/lib/libhtc_ril.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/libhtc_ril.so
-adb pull /system/lib/libmm-omxcore.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/libmm-omxcore.so
 adb pull /system/lib/liboemcamera.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/liboemcamera.so
-adb pull /system/lib/libOmxCore.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/libOmxCore.so
 adb pull /system/lib/libOmxVdec.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/libOmxVdec.so
-adb pull /system/lib/libOmxVidEnc.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/libOmxVidEnc.so
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__MANUFACTURER__/$MANUFACTURER/g > ../../../vendor/$MANUFACTURER/$DEVICE/device-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
@@ -71,7 +66,6 @@ PRODUCT_COPY_FILES := \\
 # All the blobs necessary for bravo
 PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/akmd:system/bin/akmd \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/mm-venc-omx-test:system/bin/mm-venc-omx-test \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/parse_radio_log:system/bin/parse_radio_log \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/AudioBTID.csv:system/etc/AudioBTID.csv \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bcm4329.hcd:system/etc/firmware/bcm4329.hcd \\
@@ -88,11 +82,8 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libgsl.so:system/lib/libgsl.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libhtc_acoustic.so:system/lib/libhtc_acoustic.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libmm-omxcore.so:system/lib/libmm-omxcore.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/liboemcamera.so:system/lib/liboemcamera.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxCore.so:system/lib/libOmxCore.so \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxVdec.so:system/lib/libOmxVdec.so \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/libOmxVidEnc.so:system/lib/libOmxVidEnc.so
 EOF
 
 ./setup-makefiles.sh
