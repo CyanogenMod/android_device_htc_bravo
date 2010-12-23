@@ -65,8 +65,6 @@ BOARD_VENDOR_USE_AKMD := akm8973
 
 BOARD_EGL_CFG := device/htc/bravo/egl.cfg
 
-BOARD_USES_QCOM_LIBS := true
-
 BOARD_USE_FROYO_LIBCAMERA := true
 
 # Use RGB565 surfaces until userspace drivers are upgraded
