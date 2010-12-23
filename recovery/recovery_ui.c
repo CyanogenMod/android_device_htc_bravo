@@ -29,7 +29,7 @@ char* MENU_ITEMS[] = { "reboot system now",
                        "wipe cache partition",
                        NULL };
 
-void recovery_firmware_update_log();
+void recover_firmware_update_log();
 
 int device_recovery_start() {
     recover_firmware_update_log();
