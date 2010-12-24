@@ -14,7 +14,7 @@
 
 LOCAL_PATH:= $(call my-dir)
 
-ifneq ($(TARGET_SIMULATOR),true)
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),bravo)
 
 include $(CLEAR_VARS)
 
@@ -30,4 +30,4 @@ LOCAL_PRELINK_MODULE := false
 
 include $(BUILD_SHARED_LIBRARY)
 
-endif # !TARGET_SIMULATOR
+endif # TARGET_BOOTLOADER_BOARD_NAME
