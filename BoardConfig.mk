@@ -70,6 +70,9 @@ BOARD_NO_RGBX_8888 := true
 
 BOARD_USES_QCOM_LIBS := true
 
+BOARD_HAVE_FM_RADIO := true
+BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
+
 # # cat /proc/mtd
 # dev:    size   erasesize  name
 # mtd0: 000a0000 00020000 "misc"
