@@ -1,3 +1,10 @@
+on init
+    export DOWNLOAD_CACHE /data/local/download
+
+on fs
+    mkdir /data/local 0771 shell shell
+    mkdir /data/local/download 0771 system cache
+
 on boot
     mount debugfs /sys/kernel/debug /sys/kernel/debug
 
