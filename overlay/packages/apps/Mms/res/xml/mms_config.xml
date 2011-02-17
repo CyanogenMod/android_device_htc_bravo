@@ -25,10 +25,10 @@
     <int name="maxMessageSize">307200</int>
 
     <!-- Maximum height for an attached image -->
-    <int name="maxImageHeight">480</int>
+    <int name="maxImageHeight">768</int>
 
     <!-- Maximum width for an attached image -->
-    <int name="maxImageWidth">640</int>
+    <int name="maxImageWidth">1024</int>
 
     <!-- User-Agent parameter used in MMS http request -->
     <string name="userAgent">Bravo</string>
