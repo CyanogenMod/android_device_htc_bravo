@@ -75,6 +75,10 @@ service dhcpcd_eth0 /system/bin/dhcpcd -ABKL
     disabled
     oneshot
 
+service iprenew_eth0 /system/bin/dhcpcd -n
+    disabled
+    oneshot
+
 # bugreport is triggered by the KEY_VOLUMEUP and BTN_MOUSE keycodes
 service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport
     disabled
