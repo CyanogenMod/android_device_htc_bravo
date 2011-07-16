@@ -108,7 +108,7 @@ static void set_speaker_light_locked (struct light_device_t *dev, struct light_s
 		case LIGHT_FLASH_TIMED:
 			switch (color) {
 				case LED_AMBER:
-					write_int (AMBER_BLINK_FILE, 1);
+					write_int (AMBER_BLINK_FILE, 4);
 					write_int (GREEN_LED_FILE, 0);
 					write_int (BLUE_LED_FILE, 0);
 					break;
@@ -165,9 +165,33 @@ static void set_speaker_light_locked (struct light_device_t *dev, struct light_s
 
 }
 
+static void set_speaker_light_locked_dual (struct light_device_t *dev, struct light_state_t *bstate, struct light_state_t *nstate) {
+
+	unsigned int bcolorRGB = bstate->color & 0xFFFFFF;
+	unsigned int bcolor = LED_BLANK;
+
+	if ((bcolorRGB >> 8)&0xFF) bcolor = LED_GREEN;
+	if ((bcolorRGB >> 16)&0xFF) bcolor = LED_AMBER;
+
+	if (bcolor == LED_AMBER) {
+		write_int (GREEN_LED_FILE, 1);
+		write_int (AMBER_BLINK_FILE, 4);
+		write_int (BLUE_LED_FILE, 0);
+	} else if (bcolor == LED_GREEN) {
+		write_int (GREEN_LED_FILE, 1);
+		write_int (AMBER_BLINK_FILE, 1);
+		write_int (BLUE_LED_FILE, 0);
+	} else {
+		LOGE("set_led_state (dual) unexpected color: bcolorRGB=%08x\n", bcolorRGB);
+	}
+
+}
+
 
 static void handle_speaker_battery_locked (struct light_device_t *dev) {
-	if (is_lit (&g_battery)) {
+	if (is_lit (&g_battery) && is_lit (&g_notification)) {
+		set_speaker_light_locked_dual (dev, &g_battery, &g_notification);
+	} else if (is_lit (&g_battery)) {
 		set_speaker_light_locked (dev, &g_battery);
 	} else {
 		set_speaker_light_locked (dev, &g_notification);
