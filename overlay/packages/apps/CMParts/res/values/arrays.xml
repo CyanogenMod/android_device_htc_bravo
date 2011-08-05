@@ -2,9 +2,9 @@
 <resources>
 
     <string-array name="entries_dual_led_colors">
-        <item>Green</item>
-        <item>Red</item>
-        <item>None</item>
+        <item>@string/trackball_color_entry_use_app</item>
+        <item>@string/trackball_color_entry_green</item>
+        <item>@string/trackball_color_entry_red</item>
     </string-array>
 
 </resources>
