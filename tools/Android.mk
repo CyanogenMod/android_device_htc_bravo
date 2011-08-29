@@ -12,10 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+LOCAL_PATH:= $(call my-dir)
+
 ifeq ($(TARGET_DEVICE),bravo)
 ifneq ($(BUILD_TINY_ANDROID),true)
-
-LOCAL_PATH:= $(call my-dir)
 
 #
 # btconfig
@@ -38,5 +38,5 @@ LOCAL_MODULE:= btconfig
 
 include $(BUILD_EXECUTABLE)
 
-endif # not BUILD_TINY_ANDROID
+endif # !BUILD_TINY_ANDROID
 endif # TARGET_DEVICE
