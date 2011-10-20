@@ -33,8 +33,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.enable.a53.HTC-ITA=1 \
     ro.ril.enable.a52=0 \
     ro.ril.enable.a53=1 \
-    ro.ril.enable.dtm = 1 \
-    ro.ril.gprsclass = 12 \
+    ro.ril.enable.dtm=1 \
+    ro.ril.gprsclass=12 \
     ro.ril.hsdpa.category=8 \
     ro.ril.hsupa.category=5 \
     ro.ril.hsxpa=2 \
@@ -62,7 +62,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # This is a high density device with more memory, so larger vm heaps for it.
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapsize=32m
+    dalvik.vm.heapsize=48m
 
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/bravo/bravo-vendor.mk)
