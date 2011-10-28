@@ -107,9 +107,6 @@ PRODUCT_PACKAGES += \
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
-# Bravo uses high-density artwork where available
-PRODUCT_LOCALES := hdpi
-
 PRODUCT_COPY_FILES += \
     device/htc/bravo/bravo-keypad.kl:system/usr/keylayout/bravo-keypad.kl \
     device/htc/bravo/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
