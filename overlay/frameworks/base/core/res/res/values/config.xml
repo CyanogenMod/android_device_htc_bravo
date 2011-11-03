@@ -24,9 +24,6 @@
          config_hardware_automatic_brightness_available is not set, so we will use software implementation -->
     <bool name="config_automatic_brightness_available">true</bool>
 
-    <!-- Our amoled doesn't animate well. -->
-    <bool name="config_animateScreenLights">false</bool>
-
     <!-- disable menu hard key on Bravo in non-pattern lockscreen -->
     <bool name="config_disableMenuKeyInLockScreen">true</bool>
 
