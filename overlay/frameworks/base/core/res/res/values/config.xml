@@ -94,6 +94,11 @@
         <item>0</item>
         <item>0</item>
         <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
     </integer-array>
     
     <!-- Component name of the default wallpaper. This will be ImageWallpaper if not 
