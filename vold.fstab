@@ -13,6 +13,6 @@
 ## <sysfs_path> - List of sysfs paths to source devices
 ######################
 
-# Mounts the first usable partition of the specified device
-dev_mount sdcard /mnt/sdcard auto /devices/platform/goldfish_mmc.0 /devices/platform/msm_sdcc.2/mmc_host/mmc1
+# Mounts the first partition of the specified device
+dev_mount sdcard /mnt/sdcard 1 /devices/platform/msm_sdcc.2/mmc_host/mmc1
 
