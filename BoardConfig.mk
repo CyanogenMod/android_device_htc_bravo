@@ -69,6 +69,7 @@ BOARD_VENDOR_USE_AKMD := akm8973
 BOARD_EGL_CFG := device/htc/bravo/egl.cfg
 
 BOARD_USE_FROYO_LIBCAMERA := true
+BOARD_USE_NEW_LIBRIL_HTC := true
 
 BOARD_USES_QCOM_LIBS := true
 
