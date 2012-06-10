@@ -26,6 +26,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
+    ro.telephony.ril_class=htc \
     rild.libpath=/system/lib/libhtc_ril.so \
     ro.ril.ecc.HTC-ELL=92,93,94 \
     ro.ril.ecc.HTC-WWE=999 \
@@ -33,7 +34,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.enable.a53.HTC-ITA=1 \
     ro.ril.enable.a52=0 \
     ro.ril.enable.a53=1 \
-    ro.ril.enable.dtm=1 \
+    ro.ril.qos.maxpdps=2 \
+    ro.ril.enable.sdr=0 \
+    ro.ril.enable.dtm=0 \
     ro.ril.gprsclass=12 \
     ro.ril.hsdpa.category=8 \
     ro.ril.hsupa.category=5 \
@@ -46,6 +49,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # 0 => WCDMA preferred.
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=0
+
+# For HSDPA low throughput
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ril.disable.power.collapse=1
+
+# For PDP overlap problem
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ril.avoid.pdp.overlap=1
 
 # Set default_france.acdb to audio_ctl driver if the ro.cid is HTC__203
 PRODUCT_PROPERTY_OVERRIDES += \
